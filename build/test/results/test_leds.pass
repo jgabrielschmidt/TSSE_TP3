@@ -1,0 +1,50 @@
+---
+:source:
+  :path: test
+  :file: test_leds.c
+:successes:
+- :test: test_LedsOffAfterCreate
+  :line: 12
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOnOneLed
+  :line: 19
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOffOneLed
+  :line: 25
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TurnOnAndOffManyLeds
+  :line: 32
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LedAllTurnOn
+  :line: 41
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LedAllTurnOff
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LedStateOn
+  :line: 54
+  :message: ''
+  :unity_test_time: 0
+- :test: test_LedStateOff
+  :line: 62
+  :message: ''
+  :unity_test_time: 0
+- :test: test_InvalidUpperLimitTurnOnLed
+  :line: 69
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 9
+  :passed: 9
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.00058470299882174
