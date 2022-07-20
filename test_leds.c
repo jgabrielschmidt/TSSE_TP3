@@ -39,14 +39,14 @@ void test_TurnOnAndOffManyLeds(void){
 
 // Se puede prender todos los LEDs de una vez.
 void test_LedAllTurnOn(void){
-    LedAllTurnOn(&ledsVirtuales);
+    LedAllTurnOn();
     TEST_ASSERT_EQUAL_HEX16(0xFFFF, ledsVirtuales);
 }
 
 // Se puede apagar todos los LEDs de una vez.
 void test_LedAllTurnOff(void){
-    LedAllTurnOn(&ledsVirtuales);
-    LedAllTurnOff(&ledsVirtuales);  
+    LedAllTurnOn();
+    LedAllTurnOff();  
     TEST_ASSERT_EQUAL_HEX16(0x0000, ledsVirtuales);
 }
 
@@ -66,8 +66,16 @@ void test_LedStateOff(void){
     TEST_ASSERT_EQUAL_HEX16(0, state);
 }
 
+// Me fijo de pasarle un numero de led invalido, superior a la max cantidad.
 void test_InvalidUpperLimitTurnOnLed(void){
     RegistrarMensaje_Expect(ALERTA, "LedTurnOn", 0, "Numero de led invalido");
     RegistrarMensaje_IgnoreArg_linea();
     LedTurnOn(17);
+}
+
+// Me fijo de pasarle un numero de led invalido, inferior a la min cantidad.
+void test_InvalidLowerLimitTurnOnLed(void){
+    RegistrarMensaje_Expect(ALERTA, "LedTurnOn", 0, "Numero de led invalido");
+    RegistrarMensaje_IgnoreArg_linea();
+    LedTurnOn(0);
 }

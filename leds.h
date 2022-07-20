@@ -2,7 +2,7 @@
 #define _LEDS_H
 
 #include <stdint.h>
-
+#include <stdbool.h>
 /**
  * @brief Configura la biblioteca y apaga todos los LEDs.
  * 
@@ -27,16 +27,14 @@ void LedTurnOff(uint8_t led);
 /**
  * @brief Prende todos los LEDs de una vez.
  * 
- * @param direccion Direccion del puerto GPIO que controla los LEDs.
  */
-void LedAllTurnOn(uint16_t * direccion);
+void LedAllTurnOn(void);
 
 /**
  * @brief Apaga todos los LEDs de una vez.
  * 
- * @param direccion Direccion del puerto GPIO que controla los LEDs.
  */
-void LedAllTurnOff(uint16_t * direccion); 
+void LedAllTurnOff(void); 
 
 /**
  * @brief Consulta el estado de un LED
